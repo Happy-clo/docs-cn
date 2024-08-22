@@ -43,6 +43,10 @@ const config: Config = {
   favicon: "/favicon.ico",
   trailingSlash: false,
   noIndex: preview,
+  i18n: {
+    defaultLocale: 'zh-Hans',
+    locales: [ 'zh-Hans' ],
+  },
   baseUrlIssueBanner: false,
   clientModules: [
     require.resolve("./src/css/custom.css"),
