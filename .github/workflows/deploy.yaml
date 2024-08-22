@@ -26,11 +26,6 @@ jobs:
       - name: Get Timestamp
         id: timestamp
         run: echo "::set-output name=timestamp::$(date +%s)"    
-      - name: Deploy Artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: Website-${{ steps.timestamp.outputs.timestamp }}
-          path: build
       - name: Deploy
         uses: easingthemes/ssh-deploy@main
         env:
